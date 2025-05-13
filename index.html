@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="utils.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="image-container">
+          <img src="/Assets/logo2.jpg" alt="" />
+        </div>
+        <div class="inputarea">
+          <input type="text" placeholder="Search more products" />
+        </div>
+        <div class="right-section">
+          <div class="ul-section">
+            <ul>
+              <li>Home</li>
+              <li>Contact</li>
+              <li>Products</li>
+              <li>About</li>
+            </ul>
+          </div>
+          <div>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="hero">
+        <div class="main-img">
+          <img class="image-main" src="/Assets/casualOutfit.jpg" alt="" />
+        </div>
+
+        <div class="description">
+          <h1 class="product-name">Name : Casual Outfit</h1>
+          <p class="updatedPrice">Price : $44.99</p>
+          <p class="about">
+            Description : Comfortable and stylish casual outfit for everyday wear
+          </p>
+
+          <div class="color-buttons">
+            <button id="red"></button>
+            <button id="green"></button>
+            <button id="blue"></button>
+            <button id="white"></button>
+          </div>
+          <p>Current-color : Red</p>
+          <a href="/">compare-colors</a>
+          <div class="size-section">
+            <div>
+              <button class="button small">S</button>
+              <button class="button medium">M</button>
+              <button class="button large">L</button>
+            </div>
+            <div>
+              <button class="size-button">size chart</button>
+            </div>
+          </div>
+          <div class="quantity-section-and-add-cart">
+            <div class="quantity">
+              <button class="button" onclick="decrement()">-</button>
+              <p class="button" id="qty">0</p>
+              <button class="button" onclick="increment()">+</button>
+            </div>
+            <div class="add-cart">
+              <button class="add-button">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="thumb-area"></div>
+      <div class="popup-backdrop"></div>
+      <div class="popup">
+        <div class="popup-area-header">
+          <h2 class="size-chart-title">Size Chart</h2>
+          <i class="fa-solid fa-xmark close-popup"></i>
+        </div>
+        <table class="size-chart-table">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Chest (in)</th>
+              <th>Waist (in)</th>
+              <th>Length (in)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>S</td>
+              <td>34–36</td>
+              <td>28–30</td>
+              <td>27</td>
+            </tr>
+            <tr>
+              <td>M</td>
+              <td>38–40</td>
+              <td>32–34</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td>L</td>
+              <td>42–44</td>
+              <td>36–38</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td>XL</td>
+              <td>46–48</td>
+              <td>40–42</td>
+              <td>30</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <section class="product__tabs">
+            <div class="tabs__header">
+                <button class="tab__btn active" data-tab="description">Description</button>
+                <button class="tab__btn" data-tab="information">Product Information</button>
+                <button class="tab__btn" data-tab="shipping">Shipping Details</button>
+            </div>
+            <div class="tabs__content">
+                <div id="description" class="tab__pane active">
+                  <h2>Product Description</h2>
+                  <p>This casual outfit is perfect for your everyday wardrobe. Designed with comfort and simplicity in mind, it blends modern style with relaxed functionality.</p>
+                  <p>Features include:</p>
+                  <ul>
+                      <li>Soft and breathable fabric</li>
+                      <li>Modern and versatile design</li>
+                      <li>Perfect for casual outings and daily wear</li>
+                      <li>Easy to pair with jeans, shorts, or joggers</li>
+                      <li>Available in multiple sizes</li>
+                  </ul>
+
+                </div>
+                <div id="information" class="tab__pane">
+                    <h2>Product Information</h2>
+                    <table class="info__table">
+                        <tr>
+                            <th>Material</th>
+                            <td>Mesh, Rubber, EVA foam</td>
+                        </tr>
+                        <tr>
+                            <th>Weight</th>
+                            <td>280g (per shoe)</td>
+                        </tr>
+                        <tr>
+                            <th>Closure</th>
+                            <td>Lace-up</td>
+                        </tr>
+                        <tr>
+                            <th>Heel Height</th>
+                            <td>30mm</td>
+                        </tr>
+                        <tr>
+                            <th>Forefoot Height</th>
+                            <td>20mm</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="shipping" class="tab__pane">
+                    <h2>Shipping Details</h2>
+                    <p>We offer worldwide shipping with the following options:</p>
+                    <ul>
+                        <li><strong>Standard Shipping:</strong> 3-5 business days - $5.99</li>
+                        <li><strong>Express Shipping:</strong> 1-2 business days - $12.99</li>
+                        <li><strong>Free Shipping:</strong> For orders over $100</li>
+                    </ul>
+                    <p>Returns are accepted within 30 days of purchase. Items must be unworn and in original packaging.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="bundle-section">
+            <h2 class="bundle__title">Buy Together And Save</h2>
+            <div class="bundle__container">
+                <div class="bundle__item">
+                    <div class="bundel__details">
+                      <img src="./assets/casualOutfit.jpg" alt="">
+                      <div class="bundle__price">$44.99</div>
+                    </div>
+                </div>
+                <div class="bundle-plus">+</div>
+                <div class="bundle__item">
+                   <div class="bundel__details">
+                      <img src="./assets/cap.jpg" alt="">
+                      <div class="bundle__price">$10.00</div>
+                    </div>
+                </div>
+                <div class="bundle-plus">=</div>
+                <div class="bundle__total">
+                    <div class="price">$54.99</div>
+                    <div class="discount">Save $10</div>
+                    <button class="cart__button">Add Bundle to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="pair_well_section">
+            <h2 class="section-title">Pair Well With</h2>
+            <div class="pair_well_container">
+                <div class="pair_well_items">
+                    <img src="./assets/whiteShirt.jpg" alt="">
+                    <h3>white premium shirt</h3>
+                    <div>$19.99</div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="pair_well_items">
+                    <img src="./assets/shirt2.jpg" alt="">
+                    <h3>Cotton - casual shirt</h3>
+                    <div>$24.99</div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="pair_well_items">
+                    <img src="./assets/shirt3.jpg" alt="">
+                    <h3>Shirt polister</h3>
+                    <div>$14.99</div>
+                    <button >Add to Cart</button>
+                </div>
+                <div class="pair_well_items">
+                    <img src="./assets/casual.jpg" alt="">
+                    <h3>Casual shirt for wedding and office</h3>
+                    <div>$39.99</div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="related__product">
+            <h2>You May Also Like</h2>
+            <div class="related__container">
+                <div class="related__items">
+                    <div class="product__badge">New</div>
+                    <img src="./assets/shoes.jpg" alt="">
+                    <h3>Casual Sneakers and shoes</h3>
+                    <div>From $99.99</div>
+                </div>
+                <div class="related__items">
+                    <div class="product__badge">Polular</div>
+                    <img src="./assets/iPhone.jpg" alt="">
+                    <h3>Phones</h3>
+                    <div>From $299.99</div>
+
+                </div>
+                <div class="related__items">
+                    <img src="./assets/headphone.jpg" alt="">
+                    <h3>Electronic Gadgets</h3>
+                    <div>From $89.99</div>
+                </div>
+                <div class="related__items">
+                    <img src="./assets/rolex.jpg" alt="">
+                    <h3>Wathes</h3>
+                    <div>From $139.99</div>
+                </div>
+            </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+          <div class="container">
+              <div class="footer-section">
+                  <h3 class="footer-title">Shop</h3>
+                  <ul class="footer-links">
+                      <li><a href="#">All Products</a></li>
+                      <li><a href="#">New Arrivals</a></li>
+                      <li><a href="#">Best Sellers</a></li>
+                      <li><a href="#">Sale</a></li>
+                  </ul>
+              </div>
+              <div class="footer-section">
+                  <h3 class="footer-title">Help</h3>
+                  <ul class="footer-links">
+                      <li><a href="#">Contact Us</a></li>
+                      <li><a href="#">FAQs</a></li>
+                      <li><a href="#">Shipping & Returns</a></li>
+                      <li><a href="#">Size Guide</a></li>
+                  </ul>
+              </div>
+              <div class="footer-section">
+                  <h3 class="footer-title">About</h3>
+                  <ul class="footer-links">
+                      <li><a href="#">Our Story</a></li>
+                      <li><a href="#">Sustainability</a></li>
+                      <li><a href="#">Careers</a></li>
+                      <li><a href="#">Press</a></li>
+                  </ul>
+              </div>
+              <div class="footer-section">
+                  <h3 class="footer-title">Newsletter</h3>
+                  <p class="newsletter-text">Subscribe for updates and exclusive offers</p>
+                  <form class="newsletter-form">
+                      <input type="email" placeholder="Your email address" class="newsletter-input">
+                      <button type="submit" class="newsletter-btn">Subscribe</button>
+                  </form>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p class="copyright">© 2023 ShopifyStore. All rights reserved.</p>
+              <div class="payment-methods">
+                  <span class="payment-icon">💳</span>
+                  <span class="payment-icon">📱</span>
+                  <span class="payment-icon">🏦</span>
+              </div>
+          </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
